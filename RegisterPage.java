@@ -80,6 +80,11 @@ public class RegisterPage extends JFrame {
             JOptionPane.showMessageDialog(this, "Please fill all fields and select a role.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
+        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid email address.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
 
        
         try {
@@ -130,3 +135,4 @@ public class RegisterPage extends JFrame {
         SwingUtilities.invokeLater(() -> new RegisterPage());
     }
 }
+
