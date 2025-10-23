@@ -9,7 +9,7 @@ public class DBConnection {
                 
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
-                // Connect to MySQL database
+
                 conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/smartprint", "root", "your_password"
                 );
@@ -51,4 +51,5 @@ public class DBConnection {
         return conn;
     }
 }
+
 
